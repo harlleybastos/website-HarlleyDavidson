@@ -13,16 +13,22 @@
     <header>
         <ul class="container">
             <img src="./res/img/logo.png" alt="">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Bikes</a></li>
-            <li><a href="#">Developer of Website</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#bikes">Bikes</a></li>
+            <li><a href="#dev">Developer of Website</a></li>
         </ul>
         <div class="img-wrapper">
-            <img src="./res/img/background.jpg" alt="">
+            <h1 class="title-wrapper">Harley Davidson</h1>
+            <video autoplay muted loop id="mybkVideo">
+                <source src="./res/video/background.mp4" type="video/mp4">
+            </video>
         </div>
+
+
+
     </header>
 
-    <section class="conthist">
+    <section class="conthist" id="history">
         <div class="history">
             <div>
                 <h2>History of Harley Davidson</h2>
@@ -43,7 +49,7 @@
         </div>
     </section>
     <main>
-        <section>
+        <section id="bikes">
             <div class="cards">
                 <div class="card">
                     <div class="image">
@@ -55,44 +61,17 @@
                         </p>
                         <div class="info">
                             <p class="text--medium">10min</p>
-                            <p class="price text--medium">Free</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="image">
-                        <img src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <p class="title text--medium">
-                            Harley Davidson Modelo
-                        </p>
-                        <div class="info">
-                            <p class="text--medium">10min</p>
-                            <p class="price text--medium">Free</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="image">
-                        <img src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <p class="title text--medium">
-                            Harley Davidson Modelo
-                        </p>
-                        <div class="info">
-                            <p class="text--medium">10min</p>
-                            <p class="price text--medium">Free</p>
+                            <p class="price text--medium">Bikes</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="./scripts.js"></script>
 </body>
 
-<footer>
+<footer id="dev">
     <p>Website developed by Harlley dos Santos Bastos</p>
 </footer>
 

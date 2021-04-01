@@ -1,99 +1,123 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-@font-face{
-    src:url(../fonts/AlternateGothic2bt2n.ttf);;
+@font-face {
+    src: url(../fonts/AlternateGothic2bt2n.ttf);
+    ;
     font-family: hds;
 }
 
 html,
 body {
-  height: 100vh;
-  font-family: hds;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    font-family: hds;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
-html{
+html {
     /*A cada 1rem será considerado 10px*/
     font-size: 62.5%;
 }
 
-header{
+header {
     background-color: #FF671F;
 }
 
-body{
-    font-size: 1.6rem;;
+body {
+    font-size: 1.6rem;
+    ;
 }
 
 main {
-  margin-bottom: 80px;
+    margin-bottom: 80px;
 }
 
-.container{
-    display:flex;
+.container {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     max-width: 980px;
     width: 90%;
-    margin:auto;
+    margin: auto;
 }
 
-.container li{
-    padding:10px;
+.container li {
+    padding: 10px;
     text-align: center;
 
 }
 
-.container li a{
+.container li a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: hds;
-    color:#fff;
+    color: #fff;
     font-size: 2.5rem;
 }
-.container img{
+
+.container img {
     width: 200px;
-    margin-left:20px;
-    padding:15px 0;
+    margin-left: 20px;
+    padding: 15px 0;
     height: 100%;
 }
 
-.img-wrapper{
+.img-wrapper {
     overflow: hidden;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
+    display: flex;
+    position: relative;
 }
 
-.img-wrapper img{
+.img-wrapper img {
     max-width: 100%;
     opacity: 0.6;
     object-fit: contain;
     filter: blur(3px);
 }
 
+#mybkVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 
-.conthist{
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: #fff;
+    position: fixed;
+    margin: 0 auto;
+}
+
+
+.conthist {
     margin: 80px 0;
 }
-.history{
-  width: 90%;
-  max-width: 980px;
-  margin: auto;
-  display: flex;
+
+.history {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    display: flex;
 }
 
-.history h2{
-    font-size: 2.8rem;
+.history h2 {
+    font-size: 3rem;
 }
-.history p{
+
+.history p {
     color: #000;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     line-height: 3.2rem;
     margin: 10px 0px 0px;
 }
@@ -109,63 +133,69 @@ main {
     grid-gap: 20px;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     background-color: #FF671F;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
-.card:hover{
+
+.card:hover {
     transform: translateY(-7px);
 }
 
-.text--medium{
-    font-size: 1.6rem;
+.text--medium {
+    font-size: 2rem;
     line-height: 2.6rem;
     font-weight: 400;
-    color:#ecf0f1;
+    color: #ecf0f1;
+}
+
+p.title.text--medium {
+    font-size: 4rem;
 }
 
 .image {
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 */
 
-  overflow: hidden;
-  position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 .image img {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .content {
-  margin: 20px;
+    margin: 20px;
 }
 
 .title {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .info {
-  display: flex;
-  align-self: end;
-  align-items: center;
+    display: flex;
+    align-self: end;
+    align-items: center;
 }
 
 .price {
-  margin-left: auto;
-  padding: 5px 20px;
-  border-radius: 20px;
-  background-color: #7159c1;
-  filter: brightness(90%);
+    margin-left: auto;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: #7159c1;
+    filter: brightness(90%);
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -175,29 +205,38 @@ footer{
     background-color: #FF671F;
 }
 
-footer p{
-    color:#fff;
+footer p {
+    color: #fff;
     font-family: hds;
     text-transform: uppercase;
+    font-size: 3rem;
 }
 
-@media(max-width: 768px){
-    html{
+@media(max-width: 768px) {
+    html {
         font-size: 50%;
     }
 }
-@media(max-width: 1280px){
-    html{
+
+@media(max-width: 1280px) {
+    html {
         font-size: 50%;
     }
-    .history{
+
+    .history {
         flex-direction: column;
         text-align: center;
     }
-    .history h2{
-        margin-top:1rem;
+
+    .history h2 {
+        margin-top: 1rem;
     }
-    .history img{
+
+    .history img {
         order: -1;
+    }
+
+    footer {
+        font-size: 3rem;
     }
 }
