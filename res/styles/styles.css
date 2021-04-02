@@ -28,7 +28,6 @@ header {
 
 body {
     font-size: 1.6rem;
-    ;
 }
 
 main {
@@ -43,6 +42,7 @@ main {
     max-width: 980px;
     width: 90%;
     margin: auto;
+
 }
 
 .container li {
@@ -69,17 +69,25 @@ main {
 .img-wrapper {
     overflow: hidden;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.4);
     width: 100%;
     display: flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5));
     position: relative;
 }
 
-.img-wrapper img {
-    max-width: 100%;
-    opacity: 0.6;
-    object-fit: contain;
-    filter: blur(3px);
+.items-bk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
 }
 
 #mybkVideo {
@@ -87,6 +95,7 @@ main {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    /* mark the inset */
 
 }
 
@@ -94,10 +103,37 @@ main {
     display: flex;
     align-items: center;
     flex-direction: row;
-    color: #fff;
-    position: fixed;
+    justify-content: center;
+    color: #FF671F;
     margin: 0 auto;
+    font-size: 10rem;
+    text-transform: uppercase;
 }
+
+.text-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 5rem;
+}
+
+.img-logo {
+    display: flex;
+    width: 300px;
+    max-width: 90%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+video {
+    filter: blur(3px);
+    mix-blend-mode: multiply;
+}
+
+
 
 
 .conthist {
@@ -113,6 +149,7 @@ main {
 
 .history h2 {
     font-size: 3rem;
+    text-align: center;
 }
 
 .history p {
@@ -120,6 +157,12 @@ main {
     font-size: 2.5rem;
     line-height: 3.2rem;
     margin: 10px 0px 0px;
+}
+
+.history img {
+    height: 400px;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 
@@ -238,5 +281,9 @@ footer p {
 
     footer {
         font-size: 3rem;
+    }
+
+    .img-logo {
+        max-width: 30%;
     }
 }
